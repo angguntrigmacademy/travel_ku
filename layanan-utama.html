@@ -88,10 +88,11 @@
         .cta-section { background-color: var(--navy-light); color: var(--white); padding: 50px 0; text-align: center; }
 
         /* === FOOTER === */
-        footer { background-color: var(--navy); color: var(--white); padding: 60px 0 20px; }
+        footer { background-color: var(--navy); color: var(--white); padding: 40px 0 15px; }
+        footer h5 { font-weight: 700; margin-bottom: 15px; }
         footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: var(--accent); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+        footer a:hover { color: var(--accent); padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 25px; padding-top: 15px; text-align: center; font-size: 0.9rem; }
 
         /* === FLOATING BUTTONS === */
         .floating-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
@@ -165,50 +166,44 @@
 
     <section class="cta-section">
         <div class="container">
-            <h3 class="fw-bold mb-3">Butuh Bantuan Mengenai Layanan Kami?</h3>
-            <p class="mb-4">Konsultasikan rencana perjalanan ibadah Anda bersama tim ahli kami sekarang juga.</p>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg px-5" style="border-radius: 50px;">Hubungi CS Kami</a>
+            <h3 class="fw-bold mb-3">Siap Merencanakan Perjalanan Ibadah Anda?</h3>
+            <p class="mb-4">Tim konsultan kami siap membantu memberikan informasi detail mengenai paket, jadwal, dan pendaftaran.</p>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg px-5" style="border-radius: 50px;">Konsultasi Sekarang</a>
         </div>
     </section>
 
- <footer class="pt-5 pb-3" style="background-color: var(--navy); color: var(--white);">
-    <div class="container">
-        <div class="row g-4 justify-content-between">
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
-                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
+    <footer>
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
                         Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
-                </p>
-            </div>
-            
-            <div class="col-lg-2 col-md-6">
-                <h5 class="fw-bold mb-3">Tautan Cepat</h5>
-                <ul class="list-unstyled">
-                        <li class="mb-2"><a href="tentang-kami.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
-                        <li class="mb-2"><a href="paket-travel.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
-                        <li class="mb-2"><a href="layanan-utama.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
-                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
-                </ul>
-            </div>
+                    </p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Tautan Cepat</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="tentang-kami.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
+                        <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
+                        <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold mb-3">Layanan kami</h5>
-                <ul class="list-unstyled small opacity-75">
-                    <li class="mb-2">
-                        <i class="fas fa-map-marker-alt me-2" style="color: var(--accent);"></i> Gedung UmrahKita, Jakarta
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-phone-alt me-2" style="color: var(--accent);"></i> +62 812 3456 7890
-                    </li>
-                    <li class="mb-2">
-                        <i class="fas fa-envelope me-2" style="color: var(--accent);"></i> info@umrahkita.com
-                    </li>
-                </ul>
-            </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Layanan Kami</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Umroh Reguler</a></li>
+                        <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Umroh Plus Turki</a></li>
+                        <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Haji Furoda</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Badal Umroh & Haji</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold mb-3">Hubungi Kami</h5>
-                <div class="d-flex gap-3">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
                         <li class="mb-2">
                             <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
@@ -222,31 +217,44 @@
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom mt-5 pt-3 text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.123);">
-            <p class="mb-0 small opacity-50">&copy; 2026 UmrahKita. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 UmrahKita. All Rights Reserved.</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <div class="floating-container">
-        <button id="scrollTopBtn" onclick="scrollToTop()" title="Ke Atas"><i class="fas fa-arrow-up"></i></button>
-        <a href="https://wa.me/6281234567890" target="_blank" class="wa-float" title="Chat WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button id="scrollTopBtn" onclick="scrollToTop()" title="Kembali ke Atas" aria-label="Scroll ke bagian atas halaman">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="wa-float" title="Chat WhatsApp" aria-label="Hubungi kami via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    
     <script>
         const scrollTopBtn = document.getElementById("scrollTopBtn");
+
         window.onscroll = function() {
-            if (document.documentElement.scrollTop > 300) {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 scrollTopBtn.classList.add("show");
             } else {
                 scrollTopBtn.classList.remove("show");
             }
-        };
+        }
+
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
