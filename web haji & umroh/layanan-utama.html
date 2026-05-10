@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Layanan Kami | UmrahKita - Solusi Perjalanan Ibadah</title>
+    <meta name="description" content="Layanan profesional TravelKu mencakup Paket Umroh, Haji Furoda, Badal Umroh, serta pengurusan Visa dan Paspor dengan pelayanan terbaik.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* === CSS VARIABLES === */
+        :root {
+            --navy: #1A4D2E; /* Hijau Zamrud Gelap */
+            --navy-light: #2E8B57; /* Hijau Segar */
+            --white: #ffffff;
+            --gray-light: #f8f9fa;
+            --accent: #E5B80B; /* Emas Klasik */
+        }
+
+        body, html {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden; 
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* === NAVBAR === */
+        .navbar { background-color: var(--navy); padding: 15px 0; z-index: 1050; }
+        .navbar-brand { color: var(--white) !important; font-weight: 700; font-size: 1.5rem; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+
+        /* === PAGE HEADER === */
+        .inner-hero { 
+            background: linear-gradient(rgba(26, 77, 46, 0), rgba(26, 77, 46, 0.85)), 
+                        url('img/page\ tittle.webp'); 
+            background-position: center;
+            background-size: cover;
+            height: 45vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            color: var(--white); 
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        /* === SERVICE CARDS === */
+        .section-padding { padding: 80px 0; }
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 5px solid var(--navy);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--accent);
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        .service-card h4 {
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        /* === CTA SECTION === */
+        .cta-section { background-color: var(--navy-light); color: var(--white); padding: 50px 0; text-align: center; }
+
+        /* === FOOTER === */
+        footer { background-color: var(--navy); color: var(--white); padding: 60px 0 20px; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+
+        /* === FLOATING BUTTONS === */
+        .floating-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+        #scrollTopBtn { background-color: var(--navy); color: white; width: 50px; height: 50px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: all 0.3s ease; transform: translateY(20px); }
+        #scrollTopBtn.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        .wa-float { background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.3s; }
+        .wa-float:hover { transform: scale(1.1); color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                Umrah<span style="color:var(--accent);">Kita</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paket-travel.html">Paket Travel</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="layanan-utama.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="inner-hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Layanan Kami</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page" style="color: var(--accent) !important;">Layanan</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding bg-gray-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-kaaba service-icon"></i>
+                        <h4>Umroh & Haji</h4>
+                        <p class="text-muted">Penyelenggaraan perjalanan ibadah Umroh dan Haji Khusus dengan bimbingan manasik intensif dan pembimbing berpengalaman.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-passport service-icon"></i>
+                        <h4>Visa & Paspor</h4>
+                        <p class="text-muted">Layanan pengurusan dokumen perjalanan, mulai dari pembuatan paspor hingga pengurusan Visa Umroh dan Visa Haji Furoda.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-pray service-icon"></i>
+                        <h4>Badal Umroh</h4>
+                        <p class="text-muted">Layanan Badal Umroh untuk keluarga yang sudah wafat atau sakit parah, dilaksanakan oleh pelaksana amanah sesuai syariat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h3 class="fw-bold mb-3">Butuh Bantuan Mengenai Layanan Kami?</h3>
+            <p class="mb-4">Konsultasikan rencana perjalanan ibadah Anda bersama tim ahli kami sekarang juga.</p>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg px-5" style="border-radius: 50px;">Hubungi CS Kami</a>
+        </div>
+    </section>
+
+ <footer class="pt-5 pb-3" style="background-color: var(--navy); color: var(--white);">
+    <div class="container">
+        <div class="row g-4 justify-content-between">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
+                <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
+                        Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
+                </p>
+            </div>
+            
+            <div class="col-lg-2 col-md-6">
+                <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+                <ul class="list-unstyled">
+                        <li class="mb-2"><a href="tentang-kami.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
+                        <li class="mb-2"><a href="paket-travel.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-3">Layanan kami</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li class="mb-2">
+                        <i class="fas fa-map-marker-alt me-2" style="color: var(--accent);"></i> Gedung UmrahKita, Jakarta
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-phone-alt me-2" style="color: var(--accent);"></i> +62 812 3456 7890
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-envelope me-2" style="color: var(--accent);"></i> info@umrahkita.com
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-3">Hubungi Kami</h5>
+                <div class="d-flex gap-3">
+                    <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone-alt me-3"></i> +62 812 3456 7890
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-3"></i> info@umrahkita.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-5 pt-3 text-center" style="border-top: 1px solid rgba(255, 255, 255, 0.123);">
+            <p class="mb-0 small opacity-50">&copy; 2026 UmrahKita. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <div class="floating-container">
+        <button id="scrollTopBtn" onclick="scrollToTop()" title="Ke Atas"><i class="fas fa-arrow-up"></i></button>
+        <a href="https://wa.me/6281234567890" target="_blank" class="wa-float" title="Chat WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 300) {
+                scrollTopBtn.classList.add("show");
+            } else {
+                scrollTopBtn.classList.remove("show");
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
