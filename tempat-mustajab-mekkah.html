@@ -59,7 +59,13 @@
 
     <style>
         /* === CSS DASAR & NAVBAR === */
-        :root { --navy: #0A2342; --navy-light: #173b6c; --white: #ffffff; --gray-light: #f8f9fa; --accent: #d4af37; }
+        :root { 
+            --navy: #1A4D2E; /* Hijau Zamrud Gelap */
+            --navy-light: #2E8B57; /* Hijau Segar */
+            --white: #ffffff; 
+            --gray-light: #f8f9fa; 
+            --accent: #E5B80B; /* Emas Klasik */
+        }
         body, html { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; background-color: var(--gray-light); color: #333; margin: 0; padding: 0; }
         .navbar { background-color: var(--navy); padding: 15px 0; transition: all 0.3s ease-in-out; }
         .navbar-brand { color: var(--white) !important; font-weight: 700; font-size: 1.5rem; }
@@ -79,7 +85,7 @@
         .image-caption { font-size: 0.85rem; color: #777; margin-top: 10px; font-style: italic; }
 
         /* Ringkasan & Daftar Isi (TOC) */
-        .article-summary { background-color: #f0f4f8; border-left: 4px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-style: italic; color: #444;}
+        .article-summary { background-color: #f0f7f2; border-left: 4px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-style: italic; color: #444;}
         details.toc-box { background: var(--white); border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px 20px; margin-bottom: 30px; }
         details.toc-box summary { font-weight: 700; color: var(--navy); cursor: pointer; outline: none; list-style: none; display: flex; align-items: center; justify-content: space-between; font-size: 1.1rem;}
         details.toc-box summary::-webkit-details-marker { display: none; }
@@ -95,7 +101,7 @@
         .article-content p { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 20px; }
         
         /* Kotak Baca Juga */
-        .baca-juga-box { border: 1px solid var(--accent); border-radius: 8px; padding: 15px 20px; margin: 30px 0; font-weight: 600; background-color: rgba(212, 175, 55, 0.05); }
+        .baca-juga-box { border: 1px solid var(--accent); border-radius: 8px; padding: 15px 20px; margin: 30px 0; font-weight: 600; background-color: rgba(229, 184, 11, 0.05); }
         .baca-juga-box a { color: var(--navy); text-decoration: none; }
         .baca-juga-box a:hover { text-decoration: underline; }
 
@@ -103,12 +109,12 @@
         .faq-title { border-top: 2px solid #eee; padding-top: 40px; margin-top: 40px;}
         .accordion-button:not(.collapsed) { background-color: var(--navy-light); color: var(--white); }
         .accordion-button:not(.collapsed)::after { filter: brightness(0) invert(1); }
-        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(10, 35, 66, 0.25); }
+        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.25); }
 
         /* Profil Penulis */
         .author-box { display: flex; align-items: center; gap: 20px; background-color: var(--white); border: 1px solid #e0e0e0; padding: 25px; border-radius: 8px; margin-top: 50px; }
-        .author-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
-        
+        .author-img { width: 80px !important; height: 80px !important; border-radius: 50% !important; object-fit: cover !important; border: 3px solid var(--accent); }
+
         /* Share Social Media */
         .social-share-box { margin-top: 30px; padding-top: 25px; border-top: 1px dashed #ccc; display: flex; align-items: center; gap: 15px; }
         .btn-share { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; color: white; transition: 0.3s; text-decoration: none; font-size: 1.2rem;}
@@ -130,7 +136,7 @@
         footer { background-color: var(--navy); color: var(--white); padding: 40px 0 15px; }
         footer h5 { font-weight: 700; margin-bottom: 15px; }
         footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: var(--white); padding-left: 5px; }
+        footer a:hover { color: var(--accent); padding-left: 5px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 25px; padding-top: 15px; text-align: center; font-size: 0.9rem; }
         
         /* === FLOATING BUTTONS === */
@@ -154,7 +160,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Travel<span style="color:var(--accent);">Ku</span></a>
+            <a class="navbar-brand" href="index.html">Umrah<span style="color:var(--accent);">Kita</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -163,7 +169,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="paket-travel.html">Paket Travel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                 </ul>
             </div>
@@ -187,7 +193,7 @@
 
                         <h1 class="article-title">Mengenal Tempat-Tempat Mustajab di Mekkah</h1>
                         <div class="d-flex flex-wrap align-items-center text-muted mb-4" style="font-size: 0.95rem;">
-                            <span class="me-4 mb-2"><i class="far fa-user me-2 text-primary"></i>Admin TravelKu</span>
+                            <span class="me-4 mb-2"><i class="far fa-user me-2 text-primary"></i>Admin RumahKita</span>
                             <span class="me-4 mb-2"><i class="far fa-calendar-alt me-2 text-primary"></i>05 Mei 2026</span>
                             <span class="mb-2"><i class="far fa-folder-open me-2 text-primary"></i>Panduan Ibadah</span>
                         </div>
@@ -234,39 +240,55 @@
                             <p>Berlawanan dengan namanya, <strong>Maqam Ibrahim</strong> bukanlah kuburan Nabi Ibrahim AS, melainkan sebuah batu tempat berpijaknya beliau ketika membangun Ka'bah bersama putranya, Nabi Ismail AS. Di batu tersebut terdapat bekas telapak kaki Nabi Ibrahim. Tempat ini terletak beberapa meter di depan pintu Ka'bah.</p>
                             <p>Sangat dianjurkan untuk mendirikan shalat sunnah dua rakaat di belakang Maqam Ibrahim sesaat setelah Anda menyelesaikan putaran ketujuh saat ibadah Tawaf. Setelah shalat sunnah, tempat ini menjadi titik yang sangat baik untuk melangitkan doa dan memohon rida Allah SWT sebelum Anda melanjutkan ibadah ke prosesi Sa'i.</p>
 
-                            <h2 id="faq-artikel" class="faq-title mb-4">FAQ Seputar Doa di Masjidil Haram</h2>
-                            <div class="accordion mb-5" id="faqArticle">
-                                <div class="accordion-item shadow-sm border-0 rounded mb-2">
-                                    <h2 class="accordion-header" id="faqHeading1">
-                                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-                                            <strong>Apakah boleh berdoa dalam bahasa Indonesia di tempat mustajab?</strong>
-                                        </button>
-                                    </h2>
-                                    <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqArticle">
-                                        <div class="accordion-body text-muted">
-                                            Sangat boleh. Allah SWT Maha Mengetahui segala bahasa dan apa yang ada di dalam hati hamba-Nya. Jika Anda tidak hafal doa dalam bahasa Arab, berdoalah dengan bahasa ibu yang Anda pahami agar doa Anda lebih khusyuk dan bermakna.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item shadow-sm border-0 rounded">
-                                    <h2 class="accordion-header" id="faqHeading2">
-                                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-                                            <strong>Bagaimana jika tidak bisa menyentuh Multazam karena terlalu ramai?</strong>
-                                        </button>
-                                    </h2>
-                                    <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqArticle">
-                                        <div class="accordion-body text-muted">
-                                            Tidak perlu memaksakan diri. Menjaga keselamatan diri dan tidak mendzalimi jamaah lain (seperti menyikut atau mendorong) jauh lebih penting. Anda cukup menghadap ke arah Multazam atau Ka'bah dari titik yang aman, lalu angkat tangan dan berdoalah dengan sungguh-sungguh.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<div class="faq-section">
+    <h3 class="fw-bold mb-4" style="color: var(--navy);">FAQ seputar Doa di Masjidil Haram</h3>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                    Bagaimana jika kita tidak bisa mendekat ke Multazam karena keramaian?
+                </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Allah Maha Mendengar. Jika kondisi fisik atau keramaian tidak memungkinkan untuk menyentuh Multazam, Anda tetap bisa menghadap ke arah Multazam atau berdoa di area manapun di dalam Masjidil Haram dengan penuh keyakinan dan kekhusyukan.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                    Kapan waktu paling baik untuk berdoa di tempat-tempat mustajab ini?
+                </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Selain di tempat yang mustajab, doa akan lebih kuat jika dilakukan pada waktu yang mustajab juga, seperti di sepertiga malam terakhir, saat turun hujan, di antara azan dan iqamah, serta hari Jumat saat Ashar menjelang Maghrib.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                    Apakah ada ketentuan khusus pakaian saat masuk ke Hijr Ismail untuk berdoa?
+                </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Karena Hijr Ismail dianggap sebagai bagian dari dalam Ka'bah, maka ketentuan pakaiannya sama dengan saat melaksanakan Tawaf. Bagi laki-laki tetap menggunakan kain ihram (jika dalam rangkaian ibadah) dan bagi wanita harus menutup aurat dengan sempurna serta pastikan pakaian dalam keadaan suci dari najis.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                             <div class="author-box shadow-sm">
-                                <img src="https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Admin TravelKu" class="author-img">
+                                <img src="img/orang.webp" alt="Admin TravelKu" class="author-img">
                                 <div>
-                                    <h5 class="fw-bold mb-1" style="color: var(--navy);">Admin TravelKu</h5>
-                                    <p class="text-muted mb-0 small" style="line-height: 1.6;">Tim konsultan dan edukasi perjalanan ibadah di TravelKu. Memiliki passion membagikan informasi akurat seputar manasik, persiapan umroh, dan sejarah Islam untuk membekali jamaah Indonesia.</p>
+                                    <h5 class="fw-bold mb-1" style="color: var(--navy);">Admin UmrahKita</h5>
+                                    <p class="text-muted mb-0 small" style="line-height: 1.6;">Tim konsultan dan edukasi perjalanan ibadah di UmrahKita. Memiliki passion membagikan informasi akurat seputar manasik, persiapan umroh, dan sejarah Islam untuk membekali jamaah Indonesia.</p>
                                 </div>
                             </div>
 
@@ -294,39 +316,49 @@
         </div>
     </div>
 
-    <section class="related-section">
+<section class="related-section">
         <div class="container">
-            <h3 class="section-title text-center mb-5">Artikel Terkait Lainnya</h3>
+            <div class="text-center mb-5">
+                <h3 class="section-title mb-3">Artikel Terkait Lainnya</h3>
+                <p class="text-muted mx-auto" style="max-width: 700px; font-size: 1.05rem;">
+                    Perkaya wawasan Anda dengan membaca kumpulan artikel dan panduan lainnya yang telah kami siapkan khusus untuk kelancaran ibadah Anda di Tanah Suci.
+                </p>
+            </div>
+            
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1594115165996-3c58e7ceb7ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Persiapan Fisik Umroh" loading="lazy" decoding="async">
+                        <img src="img/cek fisik umroh.webp" class="card-img-top blog-img" alt="Tempat Mustajab" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">Tips Menjaga Kesehatan Fisik Menjelang Umroh</h6>
-                            <a href="tips-persiapan-fisik-umroh.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Persiapan fisik sangat penting sebelum berangkat ke tanah suci. Berikut tips agar tubuh tetap bugar dan fit...</p>
+                            <a href="tempat-mustajab-mekkah.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Barang Bawaan Umroh" loading="lazy" decoding="async">
+                        <img src="img/bawaan umroh.webp" class="card-img-top blog-img" alt="Barang Bawaan Musim Dingin" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">Barang Bawaan Wajib Saat Umroh Musim Dingin</h6>
-                            <a href="barang-bawaan-umroh-musim-dingin.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Bagi jamaah yang berangkat pada akhir tahun, pastikan membawa perlengkapan ekstra berikut ini agar ibadah lancar...</p>
+                            <a href="barang-bawaan-umroh.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1565552645632-d725e8bfc16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Sejarah Ka'bah" loading="lazy" decoding="async">
+                        <img src="img/kabah.webp" class="card-img-top blog-img" alt="Aplikasi Umroh" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">Sejarah Singkat Pembangunan Ka'bah di Mekkah</h6>
-                            <a href="tempat-mustajab-mekkah.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Menelusuri sejarah panjang kiblat umat Islam sejak zaman Nabi Ibrahim AS hingga perkembangannya saat ini...</p>
+                            <a href="aplikasi-panduan-umroh.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
     </section>
 
     <section class="cta-section">
@@ -341,7 +373,7 @@
         <div class="container">
             <div class="row g-3">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3">Travel<span style="color:var(--accent);">Ku</span></h5>
+                    <h5 class="mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
                         Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
                     </p>
@@ -352,7 +384,7 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="tentang-kami.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan Utama</a></li>
+                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
                         <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
                     </ul>
                 </div>
@@ -371,20 +403,20 @@
                     <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
                         <li class="mb-2">
-                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran TravelKu Lt. 3, Jakarta
+                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
                         </li>
                         <li class="mb-2">
                             <i class="fas fa-phone-alt me-3"></i> +62 812 3456 7890
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-envelope me-3"></i> info@travelku.com
+                            <i class="fas fa-envelope me-3"></i> info@UmrahKita.com
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2026 TravelKu. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2026 UmrahKita. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

@@ -57,9 +57,15 @@
     }
     </script>
 
-    <style>
+       <style>
         /* === CSS DASAR & NAVBAR === */
-        :root { --navy: #0A2342; --navy-light: #173b6c; --white: #ffffff; --gray-light: #f8f9fa; --accent: #d4af37; }
+        :root { 
+            --navy: #1A4D2E; /* Hijau Zamrud Gelap */
+            --navy-light: #2E8B57; /* Hijau Segar */
+            --white: #ffffff; 
+            --gray-light: #f8f9fa; 
+            --accent: #E5B80B; /* Emas Klasik */
+        }
         body, html { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; background-color: var(--gray-light); color: #333; margin: 0; padding: 0; }
         .navbar { background-color: var(--navy); padding: 15px 0; transition: all 0.3s ease-in-out; }
         .navbar-brand { color: var(--white) !important; font-weight: 700; font-size: 1.5rem; }
@@ -79,7 +85,7 @@
         .image-caption { font-size: 0.85rem; color: #777; margin-top: 10px; font-style: italic; }
 
         /* Ringkasan & Daftar Isi (TOC) */
-        .article-summary { background-color: #f0f4f8; border-left: 4px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-style: italic; color: #444;}
+        .article-summary { background-color: #f0f7f2; border-left: 4px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-style: italic; color: #444;}
         details.toc-box { background: var(--white); border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px 20px; margin-bottom: 30px; }
         details.toc-box summary { font-weight: 700; color: var(--navy); cursor: pointer; outline: none; list-style: none; display: flex; align-items: center; justify-content: space-between; font-size: 1.1rem;}
         details.toc-box summary::-webkit-details-marker { display: none; }
@@ -95,7 +101,7 @@
         .article-content p { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 20px; }
         
         /* Kotak Baca Juga */
-        .baca-juga-box { border: 1px solid var(--accent); border-radius: 8px; padding: 15px 20px; margin: 30px 0; font-weight: 600; background-color: rgba(212, 175, 55, 0.05); }
+        .baca-juga-box { border: 1px solid var(--accent); border-radius: 8px; padding: 15px 20px; margin: 30px 0; font-weight: 600; background-color: rgba(229, 184, 11, 0.05); }
         .baca-juga-box a { color: var(--navy); text-decoration: none; }
         .baca-juga-box a:hover { text-decoration: underline; }
 
@@ -103,12 +109,12 @@
         .faq-title { border-top: 2px solid #eee; padding-top: 40px; margin-top: 40px;}
         .accordion-button:not(.collapsed) { background-color: var(--navy-light); color: var(--white); }
         .accordion-button:not(.collapsed)::after { filter: brightness(0) invert(1); }
-        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(10, 35, 66, 0.25); }
+        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.25); }
 
         /* Profil Penulis */
         .author-box { display: flex; align-items: center; gap: 20px; background-color: var(--white); border: 1px solid #e0e0e0; padding: 25px; border-radius: 8px; margin-top: 50px; }
-        .author-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
-        
+        .author-img { width: 80px !important; height: 80px !important; border-radius: 50% !important; object-fit: cover !important; border: 3px solid var(--accent); }
+
         /* Share Social Media */
         .social-share-box { margin-top: 30px; padding-top: 25px; border-top: 1px dashed #ccc; display: flex; align-items: center; gap: 15px; }
         .btn-share { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; color: white; transition: 0.3s; text-decoration: none; font-size: 1.2rem;}
@@ -117,7 +123,7 @@
         .btn-wa { background-color: #25D366; }
         .btn-share:hover { filter: brightness(1.1); color: white; transform: translateY(-3px); }
 
-        /* === 3 ARTIKEL TERKAIT === */
+        /* === ARTIKEL TERKAIT === */
         .related-section { padding: 20px 0 80px; }
         .blog-card { border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; background: var(--white); border-radius: 8px; overflow: hidden;}
         .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-5px); }
@@ -130,7 +136,7 @@
         footer { background-color: var(--navy); color: var(--white); padding: 40px 0 15px; }
         footer h5 { font-weight: 700; margin-bottom: 15px; }
         footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: var(--white); padding-left: 5px; }
+        footer a:hover { color: var(--accent); padding-left: 5px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 25px; padding-top: 15px; text-align: center; font-size: 0.9rem; }
         
         /* === FLOATING BUTTONS === */
@@ -154,16 +160,16 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Travel<span style="color:var(--accent);">Ku</span></a>
+            <a class="navbar-brand" href="index.html">Umrah<span style="color:var(--accent);">Kita</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="paket-travel.html">Paket Travel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Hubungi Kami</a></li>
                 </ul>
@@ -237,38 +243,54 @@
                             <p>Jika Anda mencari oleh-oleh yang tahan lama dan bermanfaat untuk ibadah, belilah sajadah buatan Turki atau Madinah yang terkenal dengan motif cantiknya. Tasbih kayu kaukah (kokka) juga sangat diburu karena diyakini memiliki nilai historis dan manfaat kesehatan.</p>
                             <p>Jangan lupakan minyak wangi atau parfum non-alkohol khas Timur Tengah seperti aroma <em>Oud</em>, <em>Musk</em>, atau Bunga Mawar. Wewangian ini harganya sangat bervariasi, mulai dari yang ramah di kantong hingga yang sangat mahal. Membawakan wewangian ini akan memberikan kesan elegan bagi keluarga dan kerabat Anda di tanah air.</p>
 
-                            <h2 id="faq-artikel" class="faq-title mb-4">FAQ Seputar Oleh-Oleh Umroh</h2>
-                            <div class="accordion mb-5" id="faqArticle">
-                                <div class="accordion-item shadow-sm border-0 rounded mb-2">
-                                    <h2 class="accordion-header" id="faqHeading1">
-                                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-                                            <strong>Apakah boleh memasukkan air zamzam cair ke dalam koper bagasi?</strong>
-                                        </button>
-                                    </h2>
-                                    <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqArticle">
-                                        <div class="accordion-body text-muted">
-                                            Menurut peraturan penerbangan internasional dan otoritas bandara Arab Saudi, jamaah dilarang keras memasukkan cairan air zamzam baik ke dalam koper kabin maupun koper bagasi terdaftar (checked baggage) untuk mencegah kebocoran. Jamaah akan diberikan kemasan resmi 5 liter terpisah yang didistribusikan secara resmi oleh maskapai.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item shadow-sm border-0 rounded">
-                                    <h2 class="accordion-header" id="faqHeading2">
-                                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-                                            <strong>Di mana tempat belanja oleh-oleh yang murah?</strong>
-                                        </button>
-                                    </h2>
-                                    <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqArticle">
-                                        <div class="accordion-body text-muted">
-                                            Di Mekkah, Anda bisa mengunjungi kawasan Pasar Kakiyah. Sementara di Madinah, Anda bisa berbelanja di Pasar Kurma Madinah atau toko-toko di sepanjang pelataran luar Masjid Nabawi yang menawarkan harga grosir. Anda juga bisa menawar (tawar-menawar) di toko-toko tradisional tersebut.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="faq-section mt-5 pt-4 border-top">
+    <h3 class="fw-bold mb-4" style="color: var(--navy);">FAQ Seputar Oleh-Oleh Umroh</h3>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item shadow-sm mb-3 border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                    Berapa liter air zam-zam yang diperbolehkan dibawa pulang?
+                </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Sesuai dengan regulasi terbaru dari maskapai dan otoritas bandara di Arab Saudi, setiap jamaah biasanya mendapatkan jatah resmi 5 liter air zam-zam yang sudah dikemas khusus dan akan dibagikan saat tiba di bandara tujuan di Indonesia. Jamaah dilarang memasukkan air zam-zam ke dalam koper bagasi.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item shadow-sm mb-3 border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                    Di mana tempat terbaik untuk membeli oleh-oleh dengan harga murah?
+                </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Pasar Ja'fariyah di Mekkah dan Pasar Kurma di Madinah adalah tempat favorit untuk mendapatkan harga grosir. Jika Anda ingin berbelanja dengan suasana yang lebih santai dan harga tetap terjangkau, toko-toko di sekitar penginapan di Madinah seringkali menawarkan harga yang bersaing dibandingkan di Mekkah.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item shadow-sm mb-3 border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                    Apa tips agar koper tidak melebihi kapasitas karena oleh-oleh?
+                </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Disarankan untuk membeli barang-barang yang ringan seperti sajadah tipis, tasbih, atau kismis. Jika Anda membeli barang berat dalam jumlah banyak, pertimbangkan untuk menggunakan jasa ekspedisi kargo resmi yang banyak tersedia di sekitar hotel agar Anda tidak terkena biaya *overweight* di bandara.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                             <div class="author-box shadow-sm">
-                                <img src="https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Admin TravelKu" class="author-img">
+                                <img src="img/orang.webp" alt="Admin UmrahKita" class="author-img">
                                 <div>
-                                    <h5 class="fw-bold mb-1" style="color: var(--navy);">Admin TravelKu</h5>
+                                    <h5 class="fw-bold mb-1" style="color: var(--navy);">Admin UmrahKita</h5>
                                     <p class="text-muted mb-0 small" style="line-height: 1.6;">Tim Konsultan dan Perjalanan di TravelKu. Memiliki pengalaman mendalam dalam memandu jamaah umroh dan merekomendasikan destinasi ziarah serta pusat perbelanjaan terbaik di Tanah Suci.</p>
                                 </div>
                             </div>
@@ -299,32 +321,41 @@
 
     <section class="related-section">
         <div class="container">
-            <h3 class="section-title text-center mb-5">Artikel Terkait Lainnya</h3>
+            <div class="text-center mb-5">
+                <h3 class="section-title mb-3">Artikel Terkait Lainnya</h3>
+                <p class="text-muted mx-auto" style="max-width: 700px; font-size: 1.05rem;">
+                    Perkaya wawasan Anda dengan membaca kumpulan artikel dan panduan lainnya yang telah kami siapkan khusus untuk kelancaran ibadah Anda di Tanah Suci.
+                </p>
+            </div>
+            
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1594115165996-3c58e7ceb7ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Barang Bawaan Musim Dingin" loading="lazy" decoding="async">
+                        <img src="img/bawaan umroh.webp" class="card-img-top blog-img" alt="Tempat Mustajab" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">Barang Bawaan Wajib Saat Umroh Musim Dingin</h6>
-                            <a href="barang-bawaan-umroh.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Bagi jamaah yang berangkat pada akhir tahun, pastikan membawa perlengkapan ekstra berikut ini agar ibadah lancar...</p>
+                            <a href="tempat-mustajab-mekkah.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Sejarah Ka'bah" loading="lazy" decoding="async">
+                        <img src="img/kabah.webp" class="card-img-top blog-img" alt="Barang Bawaan Musim Dingin" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">Sejarah Singkat Pembangunan Ka'bah di Mekkah</h6>
-                            <a href="sejarah-kabah.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Menelusuri sejarah panjang kiblat umat Islam sejak zaman Nabi Ibrahim AS hingga perkembangannya saat ini...</p>
+                            <a href="barang-bawaan-umroh.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1565552645632-d725e8bfc16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Persiapan Mental Umroh" loading="lazy" decoding="async">
+                        <img src="img/spiritual.webp" class="card-img-top blog-img" alt="Aplikasi Umroh" loading="lazy" decoding="async">
                         <div class="card-body">
-                            <h6 class="card-title fw-bold" style="line-height: 1.4;">Persiapan Spiritual dan Mental Sebelum Berangkat Umroh</h6>
-                            <a href="#" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <h6 class="card-title fw-bold" style="line-height: 1.4;">5 Aplikasi Wajib Install Sebelum Pergi Umroh</h6>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Gunakan teknologi untuk memudahkan ibadah Anda. Ini aplikasi panduan doa dan peta navigasi di Arab Saudi...</p>
+                            <a href="aplikasi-panduan-umroh.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
@@ -344,7 +375,7 @@
         <div class="container">
             <div class="row g-3">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3">Travel<span style="color:var(--accent);">Ku</span></h5>
+                    <h5 class="mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
                         Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
                     </p>
@@ -355,7 +386,7 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="tentang-kami.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan Utama</a></li>
+                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
                         <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
                     </ul>
                 </div>
@@ -374,20 +405,20 @@
                     <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
                         <li class="mb-2">
-                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran TravelKu Lt. 3, Jakarta
+                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
                         </li>
                         <li class="mb-2">
                             <i class="fas fa-phone-alt me-3"></i> +62 812 3456 7890
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-envelope me-3"></i> info@travelku.com
+                            <i class="fas fa-envelope me-3"></i> info@UMrahKita.com
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2026 TravelKu. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2026 UmrahKita. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

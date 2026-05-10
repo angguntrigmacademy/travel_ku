@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Tentang Kami | TravelKu - Biro Perjalanan Haji & Umroh Terpercaya</title>
+    <title>Tentang Kami | UmrahKita - Biro Perjalanan Haji & Umroh Terpercaya</title>
     <meta name="description" content="Pelajari lebih lanjut tentang TravelKu, biro perjalanan haji dan umroh resmi berizin Kemenag yang berkomitmen memberikan pelayanan sepenuh hati dan bimbingan sesuai Sunnah.">
     <meta name="keywords" content="Tentang TravelKu, Profil Biro Umroh, Legalitas Travel Umroh, Visi Misi Travel Umroh, Travel Haji Resmi">
     <meta name="author" content="TravelKu">
@@ -21,7 +21,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#0A2342">
+    <meta name="theme-color" content="#1A4D2E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,43 +32,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+ "context": "https://schema.org",
+"@type": "AboutPage",
+  "mainEntity": {
+    "@type": "TravelAgency",
+    "name": "TravelKu",
+    "image": "https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    "@id": "https://www.travelku.com/",
+    "url": "https://www.travelku.com/tentang-kami.html",
+    "telephone": "+6281234567890",
+    "address": 
     {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "mainEntity": {
-        "@type": "TravelAgency",
-        "name": "TravelKu",
-        "image": "https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "@id": "https://www.travelku.com/",
-        "url": "https://www.travelku.com/tentang-kami.html",
-        "telephone": "+6281234567890",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Gedung Perkantoran TravelKu Lt. 3",
-          "addressLocality": "Jakarta",
-          "addressRegion": "DKI Jakarta",
-          "postalCode": "12345",
-          "addressCountry": "ID"
-        },
-        "description": "TravelKu adalah biro perjalanan resmi yang memiliki legalitas penuh dari Kemenag RI, fokus pada pelayanan Umroh dan Haji sesuai tuntunan Sunnah."
-      }
-    }
-    </script>
+    
+      "@type": "PostalAddress",
+      "streetAddress": "Gedung Perkantoran TravelKu Lt. 3",
+      "addressLocality": "Jakarta",
+      "addressRegion": "DKI Jakarta",
+      "postalCode": "12345",
+      "addressCountry": "ID"
+    },
+    "description": "UmrahKita adalah biro perjalanan resmi yang memiliki legalitas penuh dari Kemenag RI, fokus pada pelayanan Umroh dan Haji sesuai tuntunan Sunnah."
+}
+}
+</script>
 
     <style>
-        :root { --navy: #0A2342; --navy-light: #173b6c; --white: #ffffff; --gray-light: #f8f9fa; --accent: #d4af37; }
+        /* === CSS VARIABLES & RESET === */
+        :root {
+            /* Tema Hijau Islami & Emas */
+            --navy: #1A4D2E; /* Hijau Zamrud Gelap */
+            --navy-light: #2E8B57; /* Hijau Segar */
+            --white: #ffffff;
+            --gray-light: #f8f9fa;
+            --accent: #E5B80B; /* Emas Klasik */
+        }
+
         body, html { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; width: 100%; margin: 0; padding: 0; background-color: var(--white); color: #333; }
+        
         .navbar { background-color: var(--navy); padding: 15px 0; transition: all 0.3s ease-in-out; }
         .navbar-brand { color: var(--white) !important; font-weight: 700; font-size: 1.5rem; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
         .navbar-toggler { border-color: rgba(255,255,255,0.5); }
         .navbar-toggler-icon { filter: invert(1); }
+/* === INNER HERO (Page Title dengan Gambar) === */
+        .inner-hero { 
+            /* Overlay hijau zamrud sesuai permintaan Anda */
+            background: linear-gradient(rgba(26, 77, 46, 0), rgba(26, 77, 46, 0.85)), 
+                        url('img/page\ tittle.webp'); 
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 50vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            color: var(--white); 
+            margin-top: 60px; /* Menghindari overlap dengan fixed navbar */
+            text-align: center;
+        }
 
-        .inner-hero { background: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.85)), url('https://images.unsplash.com/photo-1594115165996-3c58e7ceb7ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; height: 50vh; display: flex; align-items: center; color: var(--white); margin-top: 60px; }
-        .section-padding { padding: 60px 0; }
-        .section-title { color: var(--navy); font-weight: 700; margin-bottom: 30px; }
+        .inner-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 0;
+        }
+
+        .section-padding { 
+            padding: 80px 0; /* Sedikit ditambah agar lebih lega */
+        }
+
+        .section-title { 
+            color: var(--navy); 
+            font-weight: 700; 
+            margin-bottom: 40px; 
+            text-align: center;
+        }
 
         .vm-card { background-color: var(--white); border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); padding: 40px 30px; height: 100%; border-bottom: 4px solid var(--accent); transition: transform 0.3s; }
         .vm-card:hover { transform: translateY(-5px); }
@@ -79,7 +121,7 @@
         footer { background-color: var(--navy); color: var(--white); padding: 40px 0 15px; }
         footer h5 { font-weight: 700; margin-bottom: 15px; }
         footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: var(--white); padding-left: 5px; }
+        footer a:hover { color: var(--accent); padding-left: 5px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 25px; padding-top: 15px; text-align: center; font-size: 0.9rem; }
 
         .floating-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
@@ -95,16 +137,16 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Travel<span style="color:var(--accent);">Ku</span></a>
+            <a class="navbar-brand" href="index.html">Umrah<span style="color:var(--accent);">Kita</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="abouthtml">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="paket-travel.html">Paket Travel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan-utama.html">Layanan Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan-utama.html">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 </ul>
             </div>
@@ -113,7 +155,7 @@
 
     <header class="inner-hero">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3">Mengenal TravelKu</h1>
+            <h1 class="display-4 fw-bold mb-3">Mengenal UmrahKita</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
@@ -136,7 +178,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1565552645632-d725e8bfc16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Profil TravelKu" class="img-fluid rounded shadow-lg" loading="lazy" decoding="async">
+                    <img src="img/logo.webp" alt="Profil TravelKu" class="img-fluid rounded shadow-lg" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -177,30 +219,30 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <p class="text-muted mb-5">
-                        Ketenangan ibadah Anda adalah prioritas kami. TravelKu telah memiliki izin resmi dari Kementerian Agama Republik Indonesia sebagai Penyelenggara Perjalanan Ibadah Umroh (PPIU) dan Penyelenggara Ibadah Haji Khusus (PIHK).
+                        Ketenangan ibadah Anda adalah prioritas kami. UmrahKita telah memiliki izin resmi dari Kementerian Agama Republik Indonesia sebagai Penyelenggara Perjalanan Ibadah Umroh (PPIU) dan Penyelenggara Ibadah Haji Khusus (PIHK).
                     </p>
                 </div>
             </div>
             
             <div class="row justify-content-center g-4">
                 <div class="col-md-4 col-sm-6">
-                    <div class="p-4 border rounded shadow-sm">
-                        <i class="fas fa-file-contract text-primary fs-1 mb-3"></i>
-                        <h5 class="fw-bold">Izin Kemenag RI</h5>
+                    <div class="p-4 border rounded shadow-sm bg-white">
+                        <i class="fas fa-file-contract fs-1 mb-3" style="color: var(--accent);"></i>
+                        <h5 class="fw-bold" style="color: var(--navy);">Izin Kemenag RI</h5>
                         <p class="text-muted small mb-0">SK PPIU No. 1234 Tahun 2020</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="p-4 border rounded shadow-sm">
-                        <i class="fas fa-shield-alt text-primary fs-1 mb-3"></i>
-                        <h5 class="fw-bold">Izin PIHK</h5>
+                    <div class="p-4 border rounded shadow-sm bg-white">
+                        <i class="fas fa-shield-alt fs-1 mb-3" style="color: var(--accent);"></i>
+                        <h5 class="fw-bold" style="color: var(--navy);">Izin PIHK</h5>
                         <p class="text-muted small mb-0">SK PIHK No. 5678 Tahun 2021</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="p-4 border rounded shadow-sm">
-                        <i class="fas fa-award text-primary fs-1 mb-3"></i>
-                        <h5 class="fw-bold">Sertifikasi KAN</h5>
+                    <div class="p-4 border rounded shadow-sm bg-white">
+                        <i class="fas fa-award fs-1 mb-3" style="color: var(--accent);"></i>
+                        <h5 class="fw-bold" style="color: var(--navy);">Sertifikasi KAN</h5>
                         <p class="text-muted small mb-0">Standar Manajemen Mutu ISO 9001:2015</p>
                     </div>
                 </div>
@@ -212,7 +254,7 @@
         <div class="container">
             <h3 class="fw-bold mb-3">Siap Merencanakan Perjalanan Ibadah Anda?</h3>
             <p class="mb-4">Tim konsultan kami siap membantu memberikan informasi detail mengenai paket, jadwal, dan pendaftaran.</p>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg px-5">Konsultasi Sekarang</a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg px-5" style="border-radius: 50px;">Konsultasi Sekarang</a>
         </div>
     </section>
 
@@ -220,7 +262,7 @@
         <div class="container">
             <div class="row g-3">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3">Travel<span style="color:var(--accent);">Ku</span></h5>
+                    <h5 class="mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
                         Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
                     </p>
@@ -231,7 +273,7 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="tentang-kami.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan Utama</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
                         <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
                     </ul>
                 </div>
@@ -242,7 +284,7 @@
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Umroh Reguler</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Umroh Plus Turki</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Haji Furoda</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Badal Umroh & Haji</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Badal Umroh & Haji</a></li>
                     </ul>
                 </div>
 
@@ -250,20 +292,20 @@
                     <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
                         <li class="mb-2">
-                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran TravelKu Lt. 3, Jakarta
+                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
                         </li>
                         <li class="mb-2">
                             <i class="fas fa-phone-alt me-3"></i> +62 812 3456 7890
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-envelope me-3"></i> info@travelku.com
+                            <i class="fas fa-envelope me-3"></i> info@umrahkita.com
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2026 TravelKu. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2026 UmrahKita. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

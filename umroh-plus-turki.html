@@ -59,7 +59,13 @@
 
     <style>
         /* === CSS DASAR & NAVBAR === */
-        :root { --navy: #0A2342; --navy-light: #173b6c; --white: #ffffff; --gray-light: #f8f9fa; --accent: #d4af37; }
+        :root { 
+            --navy: #1A4D2E; /* Hijau Zamrud Gelap */
+            --navy-light: #2E8B57; /* Hijau Segar */
+            --white: #ffffff; 
+            --gray-light: #f8f9fa; 
+            --accent: #E5B80B; /* Emas Klasik */
+        }
         body, html { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; background-color: var(--gray-light); color: #333; margin: 0; padding: 0; }
         .navbar { background-color: var(--navy); padding: 15px 0; transition: all 0.3s ease-in-out; }
         .navbar-brand { color: var(--white) !important; font-weight: 700; font-size: 1.5rem; }
@@ -79,7 +85,7 @@
         .image-caption { font-size: 0.85rem; color: #777; margin-top: 10px; font-style: italic; }
 
         /* Ringkasan & Daftar Isi (TOC) */
-        .article-summary { background-color: #f0f4f8; border-left: 4px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-style: italic; color: #444;}
+        .article-summary { background-color: #f0f7f2; border-left: 4px solid var(--accent); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-style: italic; color: #444;}
         details.toc-box { background: var(--white); border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px 20px; margin-bottom: 30px; }
         details.toc-box summary { font-weight: 700; color: var(--navy); cursor: pointer; outline: none; list-style: none; display: flex; align-items: center; justify-content: space-between; font-size: 1.1rem;}
         details.toc-box summary::-webkit-details-marker { display: none; }
@@ -95,7 +101,7 @@
         .article-content p { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 20px; }
         
         /* Kotak Baca Juga */
-        .baca-juga-box { border: 1px solid var(--accent); border-radius: 8px; padding: 15px 20px; margin: 30px 0; font-weight: 600; background-color: rgba(212, 175, 55, 0.05); }
+        .baca-juga-box { border: 1px solid var(--accent); border-radius: 8px; padding: 15px 20px; margin: 30px 0; font-weight: 600; background-color: rgba(229, 184, 11, 0.05); }
         .baca-juga-box a { color: var(--navy); text-decoration: none; }
         .baca-juga-box a:hover { text-decoration: underline; }
 
@@ -103,12 +109,12 @@
         .faq-title { border-top: 2px solid #eee; padding-top: 40px; margin-top: 40px;}
         .accordion-button:not(.collapsed) { background-color: var(--navy-light); color: var(--white); }
         .accordion-button:not(.collapsed)::after { filter: brightness(0) invert(1); }
-        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(10, 35, 66, 0.25); }
+        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.25); }
 
         /* Profil Penulis */
         .author-box { display: flex; align-items: center; gap: 20px; background-color: var(--white); border: 1px solid #e0e0e0; padding: 25px; border-radius: 8px; margin-top: 50px; }
-        .author-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
-        
+        .author-img { width: 80px !important; height: 80px !important; border-radius: 50% !important; object-fit: cover !important; border: 3px solid var(--accent); }
+
         /* Share Social Media */
         .social-share-box { margin-top: 30px; padding-top: 25px; border-top: 1px dashed #ccc; display: flex; align-items: center; gap: 15px; }
         .btn-share { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; color: white; transition: 0.3s; text-decoration: none; font-size: 1.2rem;}
@@ -117,7 +123,7 @@
         .btn-wa { background-color: #25D366; }
         .btn-share:hover { filter: brightness(1.1); color: white; transform: translateY(-3px); }
 
-        /* === 3 ARTIKEL TERKAIT === */
+        /* === ARTIKEL TERKAIT === */
         .related-section { padding: 20px 0 80px; }
         .blog-card { border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; background: var(--white); border-radius: 8px; overflow: hidden;}
         .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-5px); }
@@ -130,7 +136,7 @@
         footer { background-color: var(--navy); color: var(--white); padding: 40px 0 15px; }
         footer h5 { font-weight: 700; margin-bottom: 15px; }
         footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: var(--white); padding-left: 5px; }
+        footer a:hover { color: var(--accent); padding-left: 5px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 25px; padding-top: 15px; text-align: center; font-size: 0.9rem; }
         
         /* === FLOATING BUTTONS === */
@@ -154,18 +160,17 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Travel<span style="color:var(--accent);">Ku</span></a>
+            <a class="navbar-brand" href="index.html">Umrah<span style="color:var(--accent);">Kita</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="paket-travel.html">Paket Travel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Hubungi Kami</a></li>
                 </ul>
             </div>
         </div>
@@ -188,14 +193,14 @@
 
                         <h1 class="article-title">Daya Tarik Paket Umroh Plus Turki Bosphorus</h1>
                         <div class="d-flex flex-wrap align-items-center text-muted mb-4" style="font-size: 0.95rem;">
-                            <span class="me-4 mb-2"><i class="far fa-user me-2 text-primary"></i>Admin TravelKu</span>
+                            <span class="me-4 mb-2"><i class="far fa-user me-2 text-primary"></i>Admin UmrahKita</span>
                             <span class="me-4 mb-2"><i class="far fa-calendar-alt me-2 text-primary"></i>10 Maret 2026</span>
                             <span class="mb-2"><i class="far fa-folder-open me-2 text-primary"></i>Rekomendasi Paket</span>
                         </div>
 
                         <div class="article-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Pemandangan indah Masjid Biru di Istanbul Turki" class="article-image shadow-sm" fetchpriority="high">
-                            <p class="image-caption">Istanbul menawarkan jejak kejayaan peradaban Islam di dua benua. (Foto: Unsplash)</p>
+                            <img src="img/instanbul turkey.webp" alt="Pemandangan indah Masjid Biru di Istanbul Turki" class="article-image shadow-sm" fetchpriority="high">
+                            <p class="image-caption">Istanbul menawarkan jejak kejayaan peradaban Islam di dua benua.</p>
                         </div>
 
                         <div class="article-content">
@@ -227,7 +232,7 @@
                             <p>Dua bangunan ikonik yang letaknya saling berhadapan ini adalah menu wajib dalam rute perjalanan Turki. <strong>Hagia Sophia</strong>, sebuah mahakarya arsitektur yang usianya ribuan tahun, telah resmi difungsikan kembali sebagai masjid. Shalat di dalam bangunan bersejarah ini memberikan sensasi spiritual yang luar biasa.</p>
 
                             <div class="article-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Pemandangan burung camar dan selat Bosphorus" class="article-image shadow-sm" loading="lazy" decoding="async">
+                                <img src="img/selat bosphorus.webp" alt="Pemandangan burung camar dan selat Bosphorus" class="article-image shadow-sm" loading="lazy" decoding="async">
                                 <p class="image-caption">Mengarungi Selat Bosphorus memberikan pengalaman tak terlupakan melihat batas benua Asia dan Eropa. (Foto: Unsplash)</p>
                             </div>
 
@@ -237,38 +242,54 @@
                             <p>Daya tarik wisata lainnya adalah <em>Bosphorus Cruise</em>. Anda akan diajak menaiki kapal pesiar pribadi menyusuri Selat Bosphorus yang memisahkan benua Asia dan benua Eropa. Dari atas kapal, mata Anda akan dimanjakan dengan deretan kastil megah peninggalan Ottoman, benteng pertahanan Rumeli Hisari, hingga rumah-rumah mewah yang berjejer di pinggir selat.</p>
                             <p>Paket Umroh Plus Turki biasanya menempatkan rute kunjungan ke Turki ini <strong>sebelum</strong> Anda berangkat menuju Arab Saudi untuk beribadah umroh, atau <strong>sesudah</strong> selesai melaksanakan umroh sebagai penutup perjalanan yang manis sebelum kembali ke Tanah Air.</p>
 
-                            <h2 id="faq-artikel" class="faq-title mb-4">FAQ Paket Umroh Plus Turki</h2>
-                            <div class="accordion mb-5" id="faqArticle">
-                                <div class="accordion-item shadow-sm border-0 rounded mb-2">
-                                    <h2 class="accordion-header" id="faqHeading1">
-                                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-                                            <strong>Berapa lama durasi total Paket Umroh Plus Turki?</strong>
-                                        </button>
-                                    </h2>
-                                    <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqArticle">
-                                        <div class="accordion-body text-muted">
-                                            Durasi normal untuk paket Umroh Plus Turki adalah 12 hingga 14 hari. Biasanya dibagi menjadi 3-4 hari berwisata di Turki (Istanbul, Bursa, atau Cappadocia), dan sisa harinya digunakan untuk fokus ibadah di Madinah dan Mekkah.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item shadow-sm border-0 rounded">
-                                    <h2 class="accordion-header" id="faqHeading2">
-                                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-                                            <strong>Apakah butuh pengurusan visa khusus untuk Turki?</strong>
-                                        </button>
-                                    </h2>
-                                    <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqArticle">
-                                        <div class="accordion-body text-muted">
-                                            Ya, Warga Negara Indonesia membutuhkan eVisa untuk masuk ke Turki. Namun Anda tidak perlu khawatir, karena seluruh proses pengurusan Visa Umroh dan eVisa Turki sudah diurus secara penuh oleh tim operasional TravelKu.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="faq-section mt-5 pt-4 border-top">
+    <h3 class="fw-bold mb-4" style="color: var(--navy);">FAQ Paket Umroh Plus Turki</h3>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item shadow-sm mb-3 border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                    Apakah diperlukan visa tambahan untuk masuk ke wilayah Turki?
+                </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Ya, untuk masuk ke Turki diperlukan E-Visa. Namun, Anda tidak perlu khawatir karena pengurusan visa Turki sudah termasuk dalam fasilitas layanan kami. Tim TravelKu akan membantu seluruh proses administrasi hingga visa Anda terbit.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item shadow-sm mb-3 border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                    Bagaimana dengan perbedaan cuaca antara Arab Saudi dan Turki?
+                </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Perbedaan cuaca bisa cukup signifikan, terutama jika Anda berangkat di musim dingin. Arab Saudi cenderung panas/kering, sementara Turki bisa sangat dingin bahkan bersalju. Kami menyarankan jamaah membawa jaket tebal dan pakaian hangat tambahan khusus untuk agenda di Turki.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item shadow-sm mb-3 border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                    Destinasi ikonik apa saja yang dikunjungi selama di Turki?
+                </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Dalam paket Umroh Plus Turki, kami akan mengajak Anda mengunjungi Blue Mosque, Hagia Sophia, Topkapi Palace, serta menikmati keindahan selat Bosphorus dengan kapal pesiar pribadi. Agenda wisata dirancang agar tetap seimbang dengan jadwal ibadah utama.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                             <div class="author-box shadow-sm">
-                                <img src="https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Admin TravelKu" class="author-img">
+                                <img src="img/orang.webp" alt="Admin UmrahKita" class="author-img">
                                 <div>
-                                    <h5 class="fw-bold mb-1" style="color: var(--navy);">Admin TravelKu</h5>
+                                    <h5 class="fw-bold mb-1" style="color: var(--navy);">Admin UmrahKita</h5>
                                     <p class="text-muted mb-0 small" style="line-height: 1.6;">Tim Konsultan Layanan dan Paket Perjalanan di TravelKu. Berkomitmen untuk merancang *itinerary* wisata Islam yang tidak hanya memanjakan mata, tetapi juga menambah wawasan sejarah peradaban Islam.</p>
                                 </div>
                             </div>
@@ -297,34 +318,43 @@
         </div>
     </div>
 
-    <section class="related-section">
+     <section class="related-section">
         <div class="container">
-            <h3 class="section-title text-center mb-5">Artikel Terkait Lainnya</h3>
+            <div class="text-center mb-5">
+                <h3 class="section-title mb-3">Artikel Terkait Lainnya</h3>
+                <p class="text-muted mx-auto" style="max-width: 700px; font-size: 1.05rem;">
+                    Perkaya wawasan Anda dengan membaca kumpulan artikel dan panduan lainnya yang telah kami siapkan khusus untuk kelancaran ibadah Anda di Tanah Suci.
+                </p>
+            </div>
+            
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1594115165996-3c58e7ceb7ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Haji Furoda" loading="lazy" decoding="async">
+                        <img src="img/haji furoda.webp" class="card-img-top blog-img" alt="Tempat Mustajab" loading="lazy" decoding="async">
                         <div class="card-body">
-                            <h6 class="card-title fw-bold" style="line-height: 1.4;">Mengenal Haji Furoda: Berangkat Haji Tanpa Antri</h6>
-                            <a href="haji-furoda.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <h6 class="card-title fw-bold" style="line-height: 1.4;">Mengenal Haji Furoda: Haji Tanpa Antri Resmi Kemenag</h6>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Apa itu visa mujamalah? Berikut penjelasan detail mengenai program Haji Furoda dan fasilitas unggulannya...</p>
+                            <a href="tempat-mustajab-mekkah.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1590402231264-5a3d76e3c046?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Aplikasi Panduan Umroh" loading="lazy" decoding="async">
+                        <img src="img/apk umroh.webp" class="card-img-top blog-img" alt="Barang Bawaan Musim Dingin" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">5 Aplikasi Wajib Install Sebelum Pergi Umroh</h6>
-                            <a href="aplikasi-panduan-umroh.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Gunakan teknologi untuk memudahkan ibadah Anda. Ini aplikasi panduan doa dan peta navigasi di Arab Saudi...</p>
+                            <a href="barang-bawaan-umroh.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card blog-card">
-                        <img src="https://images.unsplash.com/photo-1565552645632-d725e8bfc16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top blog-img" alt="Barang Bawaan Umroh" loading="lazy" decoding="async">
+                        <img src="img/bawaan umroh.webp" class="card-img-top blog-img" alt="Aplikasi Umroh" loading="lazy" decoding="async">
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="line-height: 1.4;">Barang Bawaan Wajib Saat Umroh Musim Dingin</h6>
-                            <a href="barang-bawaan-umroh.html" class="text-decoration-none small fw-bold mt-2 d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
+                            <p class="card-text text-muted small mt-2 mb-3" style="line-height: 1.5;">Bagi jamaah yang berangkat pada akhir tahun, pastikan membawa perlengkapan ekstra berikut ini agar ibadah lancar...</p>
+                            <a href="aplikasi-panduan-umroh.html" class="text-decoration-none small fw-bold mt-auto d-inline-block" style="color: var(--navy);">Baca Artikel <i class="fas fa-arrow-right ms-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
@@ -332,19 +362,11 @@
         </div>
     </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h3 class="fw-bold mb-3">Siap Merencanakan Perjalanan Ibadah Anda?</h3>
-            <p class="mb-4">Tim konsultan kami siap membantu memberikan informasi detail mengenai paket, jadwal, dan pendaftaran.</p>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg px-5">Konsultasi Sekarang</a>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <div class="row g-3">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3">Travel<span style="color:var(--accent);">Ku</span></h5>
+                    <h5 class="mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
                         Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
                     </p>
@@ -355,7 +377,7 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="tentang-kami.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan Utama</a></li>
+                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
                         <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
                     </ul>
                 </div>
@@ -374,20 +396,20 @@
                     <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
                         <li class="mb-2">
-                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran TravelKu Lt. 3, Jakarta
+                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
                         </li>
                         <li class="mb-2">
                             <i class="fas fa-phone-alt me-3"></i> +62 812 3456 7890
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-envelope me-3"></i> info@travelku.com
+                            <i class="fas fa-envelope me-3"></i> info@umrahkita.com
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2026 TravelKu. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2026 UmrahKita. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

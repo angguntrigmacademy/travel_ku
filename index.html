@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Hajj & Umroh | Navy Theme</title>
+    <title>Travel Hajj & Umroh | Tema Hijau Islami</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,55 +12,35 @@
     <style>
         /* === CSS VARIABLES & RESET === */
         :root {
-            --navy: #0A2342;
-            --navy-light: #173b6c;
+            /* Tema Hijau Islami & Emas */
+            --navy: #1A4D2E; 
+            --navy-light: #2E8B57; 
             --white: #ffffff;
             --gray-light: #f8f9fa;
-            --accent: #d4af37; 
+            --accent: #E5B80B; 
         }
 
         body, html {
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden; 
-            width: 100%;
             margin: 0;
             padding: 0;
             background-color: var(--white);
             color: #333;
-            height: 100%;
+            scroll-behavior: smooth;
         }
 
         /* === NAVBAR === */
-        .navbar {
-            background-color: var(--navy);
-            padding: 15px 0;
-            transition: all 0.3s ease-in-out;
-            z-index: 1050;
-        }
-        .navbar-brand {
-            color: var(--white) !important;
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        .nav-link {
-            color: rgba(255, 255, 255, 0.85) !important;
-            font-weight: 500;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent) !important;
-        }
-        .navbar-toggler {
-            border-color: rgba(255,255,255,0.5);
-        }
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
+        .navbar { background-color: var(--navy); padding: 15px 0; transition: all 0.3s ease-in-out; z-index: 1050; }
+        .navbar-brand { color: var(--white) !important; font-weight: 700; font-size: 1.5rem; }
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+        .navbar-toggler { border-color: rgba(255,255,255,0.5); }
+        .navbar-toggler-icon { filter: invert(1); }
 
         /* === HERO SECTION FULL PAGE === */
         .hero-section {
-            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 35, 66, 0.7)), url('img/hero\ \(2\).webp');
+            background-image: linear-gradient(rgba(26, 77, 46, 0.048), rgba(26, 77, 46, 0.75)), url('img/hero\ \(2\).webp');
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -74,77 +54,22 @@
             position: relative;
             text-align: center;
         }
+        .hero-section h1 { font-size: 3.5rem; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px; }
+        .hero-section p { font-size: 1.25rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 35px; }
 
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
-        }
-        .hero-section p {
-            font-size: 1.25rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            max-width: 800px; 
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 35px;
-        }
-
-        .btn-navy {
-            background-color: var(--navy);
-            color: var(--white);
-            border: 2px solid var(--accent);
-            padding: 12px 35px;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-        .btn-navy:hover {
-            background-color: var(--accent);
-            color: var(--navy);
-            transform: scale(1.05);
-        }
+        .btn-navy { background-color: var(--navy); color: var(--white); border: 2px solid var(--accent); padding: 12px 35px; font-weight: 600; border-radius: 50px; transition: 0.3s; }
+        .btn-navy:hover { background-color: var(--accent); color: var(--navy); transform: scale(1.05); }
 
         /* === GLOBAL SECTION PADDING === */
-        .section-padding {
-            padding: 80px 0; 
-        }
-        .section-title {
-            color: var(--navy);
-            font-weight: 700;
-            margin-bottom: 40px; 
-            text-align: center;
-        }
-        .bg-gray-light {
-            background-color: var(--gray-light);
-        }
+        .section-padding { padding: 80px 0; }
+        .section-title { color: var(--navy); font-weight: 700; margin-bottom: 40px; text-align: center; }
+        .bg-gray-light { background-color: var(--gray-light); }
 
         /* === CARDS (Paket Travel) === */
-      .card-travel .card-img-top {
-    height: 400px !important; /* Ditinggikan sedikit agar brosur lebih jelas */
-    width: 100% !important;
-    object-fit: cover !important; /* Membuat gambar menyebar penuh dari ujung ke ujung kotak */
-    background-color: #ffffff !important;
-    padding: 0 !important; 
-    margin: 0 !important;
-    border-radius: 0 !important;
-}
-
-        .card-travel:hover {
-            transform: translateY(-10px);
-        }
-        .card-travel .card-header {
-            background-color: var(--navy);
-            color: var(--white);
-            font-weight: 600;
-            font-size: 0.95rem; 
-        }
-        .card-travel .card-img-top {
-            height: 300px; 
-            object-fit: contain; 
-            background-color: #f0f4f8; 
-            padding: 10px; 
-        }
+        .card-travel { border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s; height: 100%; max-width: 320px; margin: 0 auto; }
+        .card-travel:hover { transform: translateY(-10px); }
+        .card-travel .card-header { background-color: var(--navy); color: var(--white); font-weight: 600; font-size: 0.95rem; }
+        .card-travel .card-img-top { height: 400px !important; width: 100% !important; object-fit: contain !important; background-color: #ffffff !important; padding: 0 !important; margin: 0 !important; border-radius: 0 !important; }
 
         /* === SECTIONS LAINNYA === */
         .img-gallery { height: 250px; object-fit: cover; width: 100%; transition: transform 0.3s; }
@@ -159,88 +84,23 @@
 
         .accordion-button:not(.collapsed) { background-color: var(--navy-light); color: var(--white); }
         .accordion-button:not(.collapsed)::after { filter: brightness(0) invert(1); }
-        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(10, 35, 66, 0.25); }
+        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(26, 77, 46, 0.25); }
 
         /* === CTA SECTION === */
-        .cta-section {
-            background-color: var(--navy-light);
-            color: var(--white);
-            padding: 50px 0; 
-            text-align: center;
-        }
+        .cta-section { background-color: var(--navy-light); color: var(--white); padding: 50px 0; text-align: center; }
 
         /* === FOOTER === */
-        footer {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 60px 0 20px; 
-        }
-        footer h5 {
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-        footer a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        footer a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 40px;
-            padding-top: 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.5);
-        }
+        footer { background-color: var(--navy); color: var(--white); padding: 60px 0 20px; }
+        footer h5 { font-weight: 700; margin-bottom: 20px; color: var(--white); }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--accent); padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
 
-        /* === FLOATING BUTTONS === */
-        .floating-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 1000;
-        }
-        #scrollTopBtn {
-            background-color: var(--navy);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            transform: translateY(20px);
-        }
+        /* === FLOATING BUTTONS (Sama persis dengan file lain) === */
+        .floating-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+        #scrollTopBtn { background-color: var(--navy); color: white; width: 50px; height: 50px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: all 0.3s ease; transform: translateY(20px); }
         #scrollTopBtn.show { opacity: 1; visibility: visible; transform: translateY(0); }
-        .wa-float {
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
+        .wa-float { background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.3s; }
         .wa-float:hover { transform: scale(1.1); color: white; }
 
         /* === RESPONSIVE === */
@@ -256,7 +116,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Travel<span style="color:var(--accent);">Ku</span></a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+            <!-- <img src="" alt="Logo TravelKu" style="height: 45px; margin-right: 10px;"> -->
+            Umrah<span style="color:var(--accent);">Kita</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -265,7 +129,7 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="paket-travel.html">Paket Travel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="layanan-utama.html">Layanan Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan-utama.html">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 </ul>
             </div>
@@ -279,6 +143,7 @@
                 <p class="lead">Temukan ketenangan dan kenyamanan ibadah Umroh & Haji bersama biro perjalanan terpercaya dengan fasilitas terbaik dan pembimbing sesuai Sunnah.</p>
                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                     <a href="paket-travel.html" class="btn btn-navy btn-lg px-5">Lihat Paket Travel</a>
+                    <a href="tentang-kami.html" class="btn btn-outline-light btn-lg px-5" style="border-radius: 50px;">Tentang Kami</a>
                 </div>
             </div>
         </div>
@@ -288,15 +153,15 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="img/hero.webp" alt="Tentang Kami - Biro Travel Umroh" class="img-fluid rounded shadow" loading="lazy">
+                    <img src="img/logo.webp" alt="Tentang Kami - Biro Travel Umroh" class="img-fluid rounded shadow" loading="lazy">
                 </div>
                 <div class="col-md-6">
                     <h2 class="section-title text-start">Mengapa Memilih Kami?</h2>
                     <p>Kami berkomitmen memberikan pelayanan terbaik untuk memfasilitasi ibadah Anda di Tanah Suci. Dengan pembimbing berpengalaman dan fasilitas hotel bintang 5.</p>
                     <ul class="list-unstyled mt-3">
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Resmi Terdaftar di Kemenag</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Penerbangan Langsung (Direct Flight)</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Harga Transparan, Tanpa Biaya Tersembunyi</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Resmi Terdaftar di Kemenag</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Penerbangan Langsung (Direct Flight)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Harga Transparan, Tanpa Biaya Tersembunyi</li>
                     </ul>
                 </div>
             </div>
@@ -310,9 +175,9 @@
                 <div class="col-md-4">
                     <div class="card card-travel">
                         <div class="card-header text-center py-3">Umroh Reguler 9 Hari</div>
-                        <img src="img/umroh reguler.webp" class="card-img-top" alt="Paket Umroh Reguler" loading="lazy">
+                        <img src="img/umroh 9 hari.webp" class="card-img-top" alt="Paket Umroh Reguler" loading="lazy">
                         <div class="card-body">
-                            <h5 class="card-title text-center text-primary fw-bold">Rp 26.500.000</h5>
+                            <h5 class="card-title text-center text-success fw-bold">Rp 26.500.000</h5>
                             <p class="card-text mt-3">Hotel Bintang 4 di Mekkah & Madinah. Termasuk tiket PP, visa, dan perlengkapan.</p>
                         </div>
                     </div>
@@ -322,7 +187,7 @@
                         <div class="card-header text-center py-3" style="background-color: var(--accent); color: var(--navy);">Umroh Plus Turki 12 Hari</div>
                         <img src="img/umroh turki.webp" class="card-img-top" alt="Paket Umroh Plus Turki" loading="lazy">
                         <div class="card-body">
-                            <h5 class="card-title text-center text-primary fw-bold">Rp 35.000.000</h5>
+                            <h5 class="card-title text-center text-success fw-bold">Rp 35.000.000</h5>
                             <p class="card-text mt-3">Nikmati ibadah Umroh dirangkai dengan wisata sejarah peradaban Islam di Turki.</p>
                         </div>
                     </div>
@@ -332,7 +197,7 @@
                         <div class="card-header text-center py-3">Haji Furoda 2026</div>
                         <img src="img/haji furodaa.webp" class="card-img-top" alt="Paket Haji Furoda" loading="lazy">
                         <div class="card-body">
-                            <h5 class="card-title text-center text-primary fw-bold">Hubungi Kami</h5>
+                            <h5 class="card-title text-center text-success fw-bold">Hubungi Kami</h5>
                             <p class="card-text mt-3">Berangkat tanpa antri menggunakan visa resmi Mujamalah. Fasilitas VIP.</p>
                         </div>
                     </div>
@@ -502,11 +367,11 @@
         </div>
     </section>
 
-     <footer>
+<footer>
         <div class="container">
             <div class="row g-3">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3">Travel<span style="color:var(--accent);">Ku</span></h5>
+                    <h5 class="mb-3">Umrah<span style="color:var(--accent);">Kita</span></h5>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0;">
                         Biro perjalanan Ibadah Umroh dan Haji terpercaya yang mengedepankan pelayanan sepenuh hati, kenyamanan, dan bimbingan ibadah sesuai Sunnah.
                     </p>
@@ -517,7 +382,7 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="tentang-kami.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Tentang Kami</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Paket Travel</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan Utama</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Layanan</a></li>
                         <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Artikel & Blog</a></li>
                     </ul>
                 </div>
@@ -528,7 +393,7 @@
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Umroh Reguler</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Umroh Plus Turki</a></li>
                         <li class="mb-2"><a href="paket-travel.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Haji Furoda</a></li>
-                        <li class="mb-2"><a href="layanan.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Badal Umroh & Haji</a></li>
+                        <li class="mb-2"><a href="layanan-utama.html"><i class="fas fa-chevron-right me-2 text-sm"></i> Badal Umroh & Haji</a></li>
                     </ul>
                 </div>
 
@@ -536,39 +401,46 @@
                     <h5 class="mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.7);">
                         <li class="mb-2">
-                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran TravelKu Lt. 3, Jakarta
+                            <i class="fas fa-map-marker-alt me-3"></i> Gedung Perkantoran UmrahKita Lt. 3, Jakarta
                         </li>
                         <li class="mb-2">
                             <i class="fas fa-phone-alt me-3"></i> +62 812 3456 7890
                         </li>
                         <li class="mb-2">
-                            <i class="fas fa-envelope me-3"></i> info@travelku.com
+                            <i class="fas fa-envelope me-3"></i> info@umrahkita.com
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2026 TravelKu. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2026 UmrahKita. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <div class="floating-container">
-        <button id="scrollTopBtn" onclick="scrollToTop()" title="Ke Atas"><i class="fas fa-arrow-up"></i></button>
-        <a href="https://wa.me/6281234567890" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+        <button id="scrollTopBtn" onclick="scrollToTop()" title="Ke Atas" aria-label="Scroll ke atas">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <a href="https://wa.me/6281234567890" target="_blank" class="wa-float" title="WhatsApp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         const scrollTopBtn = document.getElementById("scrollTopBtn");
+        
         window.onscroll = function() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 scrollTopBtn.classList.add("show");
             } else {
                 scrollTopBtn.classList.remove("show");
             }
         };
+
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
